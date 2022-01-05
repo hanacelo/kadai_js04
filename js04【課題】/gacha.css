@@ -1,0 +1,70 @@
+body{
+    height: auto;
+    width: 550px;
+    font-family:"ヒラギノ明朝 ProN" ;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin-top:-20px; 
+}
+
+h1{
+    color: white;
+    text-shadow: 0 0 10px  #5507FF;
+}
+
+h2{
+    height: 300px;
+    width: 300px;
+    text-align: center;
+
+}
+
+#retsu{
+    display: flex;
+    text-align: center;
+    padding-left: 150px
+}
+
+#shokan{
+    font-family:;
+    font-size: 32px;
+    color: #FFFF33;
+    text-shadow:0 0 5px black;
+}
+
+#gentei{
+    font-family:"ヒラギノ明朝 ProN" ;
+    font-size: 25px;
+    color: #FFFF33;
+    background-color: #FF0000;
+    border: solid  #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%;
+    border-width: 1ex;
+    border-radius: 50px 50px;
+    margin-left: 10px;
+    width:  120px;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+}
+
+button{
+    font-family:"ヒラギノ明朝 ProN" ;
+    font-size: 50px;
+    color: white;
+    text-shadow:0 0 3px black;
+    background-color: #FFFF33;
+    border: solid 50px #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%;
+    border-radius: 30px 30px;
+    margin-left: 10px;
+    width: 200px;
+    height: 80px;
+    
+}
+
+h4{
+    color: white;
+    font-size: 25px;
+    margin-top: -60px;
+    text-shadow: 0 0 10px  #5507FF;
+    
+}
