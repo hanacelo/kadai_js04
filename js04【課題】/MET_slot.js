@@ -59,56 +59,46 @@ $("#spin").on('click',function(){
 
 //stopボタンを押すと、ランダムで数字を表示する
 
+let random1;
+let random2;
+let random3;
+let random4;
+let random5;
+let random6;
+
 $("#stop1").on('click',function(){
     clearTimeout(slotID1);
-    let random = Math.floor(Math.random()*5);
-    $(".slot1").text(random);
-    $(".slot1").html(random);
+    random1 = Math.floor(Math.random()*5);
+    $(".slot1").text(random1);
+    $(".slot1").html(random1);
 
-});
-
-$("#stop1").on('click',function(){
     clearTimeout(slotID2);
-    let random = Math.floor(Math.random()*10);
-    $(".slot2").text(random);
-    $(".slot2").html(random);
+    random2 = Math.floor(Math.random()*10);
+    $(".slot2").text(random2);
+    $(".slot2").html(random2);
 
-});
-
-$("#stop1").on('click',function(){
     clearTimeout(slotID3);
-    let random = Math.floor(Math.random()*10);
-    $(".slot3").text(random);
-    $(".slot3").html(random);
+    random3 = Math.floor(Math.random()*10);
+    $(".slot3").text(random3);
+    $(".slot3").html(random3);
 
-});
-
-$("#stop1").on('click',function(){
     clearTimeout(slotID4);
-    let random = Math.floor(Math.random()*10);
-    $(".slot4").text(random);
-    $(".slot4").html(random);
+    random4 = Math.floor(Math.random()*10);
+    $(".slot4").text(random4);
+    $(".slot4").html(random4);
 
-});
-
-$("#stop1").on('click',function(){
     clearTimeout(slotID5);
-    let random = Math.floor(Math.random()*10);
-    $(".slot5").text(random);
-    $(".slot5").html(random);
+    random5 = Math.floor(Math.random()*10);
+    $(".slot5").text(random5);
+    $(".slot5").html(random5);
 
-});
-
-$("#stop1").on('click',function(){
     clearTimeout(slotID6);
-    let random = Math.floor(Math.random()*10);
-    $(".slot6").text(random);
-    $(".slot6").html(random);
+    random6 = Math.floor(Math.random()*10);
+    $(".slot6").text(random6);
+    $(".slot6").html(random6);
+
 
 });
-
-
-
 
 
 
@@ -119,7 +109,7 @@ callApi();
 
 //データを参照して、内部的に取ってきてる
 async function callApi() {
-    const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" + ".slot1" + ".slot2" + ".slot3" + ".slot4" + ".slot5" + ".slot6");
+    const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" +  random1 + random2 + random3 + random4 + random5 + random6);
     console.log(res)
 
     const users = await res.json();
