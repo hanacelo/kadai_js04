@@ -59,47 +59,53 @@ $("#spin").on('click',function(){
 
 //stopボタンを押すと、ランダムで数字を表示する
 
-let random1;
-let random2;
-let random3;
-let random4;
-let random5;
-let random6;
-
 $("#stop1").on('click',function(){
     clearTimeout(slotID1);
-    random1 = Math.floor(Math.random()*5);
-    $(".slot1").text(random1);
-    $(".slot1").html(random1);
-
-    clearTimeout(slotID2);
-    random2 = Math.floor(Math.random()*10);
-    $(".slot2").text(random2);
-    $(".slot2").html(random2);
-
-    clearTimeout(slotID3);
-    random3 = Math.floor(Math.random()*10);
-    $(".slot3").text(random3);
-    $(".slot3").html(random3);
-
-    clearTimeout(slotID4);
-    random4 = Math.floor(Math.random()*10);
-    $(".slot4").text(random4);
-    $(".slot4").html(random4);
-
-    clearTimeout(slotID5);
-    random5 = Math.floor(Math.random()*10);
-    $(".slot5").text(random5);
-    $(".slot5").html(random5);
-
-    clearTimeout(slotID6);
-    random6 = Math.floor(Math.random()*10);
-    $(".slot6").text(random6);
-    $(".slot6").html(random6);
-
+    let random = Math.floor(Math.random()*5);
+    $(".slot1").text(random);
+    $(".slot1").html(random);
 
 });
 
+$("#stop1").on('click',function(){
+    clearTimeout(slotID2);
+    let random = Math.floor(Math.random()*10);
+    $(".slot2").text(random);
+    $(".slot2").html(random);
+
+});
+
+$("#stop1").on('click',function(){
+    clearTimeout(slotID3);
+    let random = Math.floor(Math.random()*10);
+    $(".slot3").text(random);
+    $(".slot3").html(random);
+
+});
+
+$("#stop1").on('click',function(){
+    clearTimeout(slotID4);
+    let random = Math.floor(Math.random()*10);
+    $(".slot4").text(random);
+    $(".slot4").html(random);
+
+});
+
+$("#stop1").on('click',function(){
+    clearTimeout(slotID5);
+    let random = Math.floor(Math.random()*10);
+    $(".slot5").text(random);
+    $(".slot5").html(random);
+
+});
+
+$("#stop1").on('click',function(){
+    clearTimeout(slotID6);
+    let random = Math.floor(Math.random()*10);
+    $(".slot6").text(random);
+    $(".slot6").html(random);
+
+});
 
 
 //ここからスロットを止めた時に、枠に入った数字から、作品を割り出す
@@ -109,7 +115,7 @@ callApi();
 
 //データを参照して、内部的に取ってきてる
 async function callApi() {
-    const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" +  random1 + random2 + random3 + random4 + random5 + random6);
+    const res = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects/" + $(".slot1").html() + $(".slot2").html() + $(".slot3").html() + $(".slot4").html() + $(".slot5").html() + $(".slot6").html());
     console.log(res)
 
     const users = await res.json();
@@ -131,6 +137,3 @@ async function callApi() {
   $("#result").html('<img src = ' + imageUrl +'>')
 
   };
-
-
-  //今できなくて詰まっている部分→→→random1~6がかっこ外にあるため、結果を表示させる時に、引っ張ってくることができない
